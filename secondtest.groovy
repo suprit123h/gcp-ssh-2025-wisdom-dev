@@ -19,10 +19,13 @@ pipeline {
                 script {
                     println('Hello This is the git passkey token name: "Surpass"')
 		    sh "cd /home/suprit_local/"
-		    sh "pwd"
+		    sh "ls"
 		    sh "mkdir -p test_files"
+		    sh "ls"
 		    sh "cd test_files"
+		    sh "ls"
 		    sh "touch testingfile"
+		    sh "ls"
                 }
             }
         }
