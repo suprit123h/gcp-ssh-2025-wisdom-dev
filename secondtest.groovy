@@ -24,7 +24,7 @@ pipeline {
 
 		    sh "python --version"
 
-		    sh "kubectl version"
+		    sh "kubectl"
 
 		    sh "gcloud version"
 		   }
