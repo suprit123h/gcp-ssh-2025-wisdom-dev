@@ -16,6 +16,7 @@ pipeline {
     stages {
         stage('Hello This is the git passkey token name: "Surpass" ') {
             steps {
+	    	dir("infraGCP"){
                 script {
                     println('Hello This is the git passkey token name: "Surpass"')
 		    sh "cd /home/suprit_local/"
@@ -27,6 +28,8 @@ pipeline {
 		    sh "touch testingfile"
 		    sh "ls"
 		    sh "pwd"
+		   }
+
                 }
             }
         }
