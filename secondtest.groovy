@@ -22,7 +22,7 @@ pipeline {
 
 		    sh "pwd"
 
-		    sh "python"
+		    //sh "python"
 
 		    sh "kubectl -version"
 
