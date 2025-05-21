@@ -19,15 +19,14 @@ pipeline {
 	    	dir("infraGCP"){
                 script {
                     println('Hello This is the git passkey token name: "Surpass"')
-		    sh "cd /home/suprit_local/"
-		    sh "ls"
-		    sh "mkdir -p test_files"
-		    sh "ls"
-		    sh "cd test_files"
-		    sh "ls"
-		    sh "touch testingfile"
-		    sh "ls"
+
 		    sh "pwd"
+
+		    sh "ping 0 -c 2"
+
+		    sh "kubectl -version"
+
+		    sh "gcloud -version"
 		   }
 
                 }
