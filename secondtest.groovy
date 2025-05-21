@@ -8,7 +8,7 @@ pipeline {
     }
 
     environment{
-    	GCP_PROJECT_ID		= gcp
+    	GCP_PROJECT_ID		= 'gcp'
     	// nothing to mention as of now
     }
 
