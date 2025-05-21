@@ -8,6 +8,7 @@ pipeline {
     }
 
     environment{
+    	GCP_PROJECT_ID		= gcp-ssh-2025-wisdom-dev
     	// nothing to mention as of now
     }
 
