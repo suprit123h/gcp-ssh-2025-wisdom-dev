@@ -22,11 +22,11 @@ pipeline {
 
 		    sh "pwd"
 
-		    //sh "python"
+		    sh "python --version"
 
-		    //sh "kubectl -version"
+		    sh "kubectl version"
 
-		    sh "gcloud -version"
+		    sh "gcloud version"
 		   }
 
                 }
