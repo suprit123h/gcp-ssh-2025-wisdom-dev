@@ -26,6 +26,7 @@ pipeline {
 		    sh "ls"
 		    sh "touch testingfile"
 		    sh "ls"
+		    sh "pwd"
                 }
             }
         }
