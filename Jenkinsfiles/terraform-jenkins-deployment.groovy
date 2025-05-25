@@ -17,9 +17,9 @@ pipeline {
 
 		    sh "git clone https://github.com/suprit123h/gcp-ssh-2025-wisdom-dev.git"
 
-		    //sh "$(cd pwd)/infraGCP/terraform init"
+		    sh "/var/jenkins_home/workspace/DevOps-Workspace/terraformjobs/bucket_deployment_gcp/infraGCP/gcp-ssh-2025-wisdom-dev/terraform init"
 
-		    //sh "$(cd pwd)/infraGCP/terraform plan"
+		    sh "/var/jenkins_home/workspace/DevOps-Workspace/terraformjobs/bucket_deployment_gcp/infraGCP/gcp-ssh-2025-wisdom-dev/terraform plan"
 
 		    //sh "gcloud version"
 		   }
