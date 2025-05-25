@@ -13,8 +13,7 @@ pipeline {
 	    	dir("infraGCP"){
                 script {
                     println('Hello This is the git passkey token name: "Surpass"')
-			sh "pwd"
-			sh "ls"
+			sh "pwd ${WORKSPACE}"
 
 		    sh "git pull https://github.com/suprit123h/gcp-ssh-2025-wisdom-dev.git"
 
