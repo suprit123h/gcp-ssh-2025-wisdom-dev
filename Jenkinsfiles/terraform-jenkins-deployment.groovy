@@ -22,10 +22,8 @@ pipeline {
 		       ls
 	 
 	               terraform init
-		       //sh "terraform init"
-                       ${WORKSPACE}/infraGCP/gcp-ssh-2025-wisdom-dev/terraform plan
-                       //sh "gcloud version"
-		       '''
+                       terraform plan
+                     '''
 		   }
 
                 }
