@@ -13,12 +13,13 @@ pipeline {
 	    	dir("infraGCP"){
                 script {
                     println('Hello This is the git passkey token name: "Surpass"')
+			sh "pwd"
 
 		    sh "git clone https://github.com/suprit123h/gcp-ssh-2025-wisdom-dev.git"
 
-		    sh "$(cd pwd)/infraGCP/terraform init"
+		    //sh "$(cd pwd)/infraGCP/terraform init"
 
-		    sh "$(cd pwd)/infraGCP/terraform plan"
+		    //sh "$(cd pwd)/infraGCP/terraform plan"
 
 		    //sh "gcloud version"
 		   }
