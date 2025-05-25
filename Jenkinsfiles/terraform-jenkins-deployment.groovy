@@ -17,9 +17,9 @@ pipeline {
 
 		    sh "git pull https://github.com/suprit123h/gcp-ssh-2025-wisdom-dev.git"
 
-		    sh "${WORKSPACE}/gcp-ssh-2025-wisdom-dev/terraform init"
+		    sh "${WORKSPACE}/infraGCP/gcp-ssh-2025-wisdom-dev/terraform init"
 
-		    sh "${WORKSPACE}/gcp-ssh-2025-wisdom-dev/terraform plan"
+		    sh "${WORKSPACE}/infraGCP/gcp-ssh-2025-wisdom-dev/terraform plan"
 
 		    //sh "gcloud version"
 		   }
