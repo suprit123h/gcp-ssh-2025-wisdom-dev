@@ -22,8 +22,7 @@ pipeline {
 			file(
 				credentialsId: "ssh-devops1-dev-2025",
 				variables: 'GOOGLE_APPLICATION_CREDENTIALS'
-				),
-			   
+				) 
 			    ]){
 			    sh "echo $git_username"
                     println('Hello This is the git passkey token name: "Surpass"')
