@@ -24,7 +24,7 @@ pipeline {
 				    passwordVariable: "git_password"
 				    )
 			    ]){
-			    sh "echo $usernameVariable"
+			    sh "echo $git_username"
                     println('Hello This is the git passkey token name: "Surpass"')
 			sh "pwd ${WORKSPACE}"
 
