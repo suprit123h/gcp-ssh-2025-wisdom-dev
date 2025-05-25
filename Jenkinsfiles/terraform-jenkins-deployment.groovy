@@ -14,17 +14,16 @@ pipeline {
                 script {
 
 		    withCredentials([
-		//	file(
-		//		credentialsId: "ssh-devops1-dev-2025",
-		//		variables: 'GOOGLE_APPLICATION_CREDENTIALS'
-		//		),
+			file(
+				credentialsId: "ssh-devops1-dev-2025",
+				variables: 'GOOGLE_APPLICATION_CREDENTIALS'
+				),
 			    usernamePassword(
 				    credentialsId: "81dead19-04f7-4a8a-91c2-84adc1e8b1f1",
 				    usernameVariable: "git_username",
 				    passwordVariable: "git_password"
 				    )
 			    ]){
-			    set +x
 			    sh "echo $git_username"
                     println('Hello This is the git passkey token name: "Surpass"')
 			sh "pwd ${WORKSPACE}"
