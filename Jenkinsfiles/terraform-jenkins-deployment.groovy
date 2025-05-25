@@ -18,6 +18,7 @@ pipeline {
 		    sh '''
                        git pull https://github.com/suprit123h/gcp-ssh-2025-wisdom-dev.git
 		       cd gcp-ssh-2025-wisdom-dev
+	               pwd
 	               ${WORKSPACE}/terraform version
 		       //sh "terraform init"
                        ${WORKSPACE}/infraGCP/gcp-ssh-2025-wisdom-dev/terraform plan
