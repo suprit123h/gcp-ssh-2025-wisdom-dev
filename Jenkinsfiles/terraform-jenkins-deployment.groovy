@@ -15,7 +15,7 @@ pipeline {
                     println('Hello This is the git passkey token name: "Surpass"')
 			sh "pwd"
 
-		    sh "git clone https://github.com/suprit123h/gcp-ssh-2025-wisdom-dev.git"
+		    sh "git pull https://github.com/suprit123h/gcp-ssh-2025-wisdom-dev.git"
 
 		    sh "/var/jenkins_home/workspace/DevOps-Workspace/terraformjobs/bucket_deployment_gcp/infraGCP/gcp-ssh-2025-wisdom-dev/terraform init"
 
