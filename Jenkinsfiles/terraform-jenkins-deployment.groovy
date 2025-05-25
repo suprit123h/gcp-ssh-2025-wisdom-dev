@@ -15,14 +15,14 @@ pipeline {
                     println('Hello This is the git passkey token name: "Surpass"')
 			sh "pwd ${WORKSPACE}"
 
-		    sh "git pull https://github.com/suprit123h/gcp-ssh-2025-wisdom-dev.git"
-
-		    sh "${WORKSPACE}/terraform version"
-		    //sh "terraform init"
-
-		    sh "${WORKSPACE}/infraGCP/gcp-ssh-2025-wisdom-dev/terraform plan"
-
-		    //sh "gcloud version"
+		    sh '''
+                       git pull https://github.com/suprit123h/gcp-ssh-2025-wisdom-dev.git
+		       cd gcp-ssh-2025-wisdom-dev
+	               ${WORKSPACE}/terraform version
+		       //sh "terraform init"
+                       ${WORKSPACE}/infraGCP/gcp-ssh-2025-wisdom-dev/terraform plan
+                       //sh "gcloud version"
+		       '''
 		   }
 
                 }
