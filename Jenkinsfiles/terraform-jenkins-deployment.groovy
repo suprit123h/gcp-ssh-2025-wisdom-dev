@@ -30,7 +30,7 @@ pipeline {
 						git pull origin master
 						pwd
 						ls
-
+                                                rm -rf *.tfstate
 						terraform init
 						terraform plan
 					'''
