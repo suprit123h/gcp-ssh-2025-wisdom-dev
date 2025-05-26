@@ -11,5 +11,6 @@ provider "google" {
   project = var.project
   region   = var.region
   zone     = var.zone
-  credentials = file("ssh-devops1-dev-2025-9684dfcf3b32.json")
+  credentials = file("GOOGLE_APPLICATION_CREDENTIALS")
+ # credentials = file("ssh-devops1-dev-2025-9684dfcf3b32.json")
 }
