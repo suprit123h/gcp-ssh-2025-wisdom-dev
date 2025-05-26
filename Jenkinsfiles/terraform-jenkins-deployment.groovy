@@ -10,38 +10,34 @@ pipeline {
     stages {
 	    
         stage('Hello This is the git passkey token name: "Surpass" ') {
-            steps {
-	    	dir("infraGCP"){
-                script {
+	steps {
+		dir("infraGCP") {
+			script {
+				withCredentials([
+					file(
+						credentialsId: 'ssh-devops1-dev-2025',
+						variable: 'GOOGLE_APPLICATION_CREDENTIALS'
+					)
+				]) {
+					echo 'Hello This is the git passkey token name: "Surpass"'
+					sh "pwd"
 
-		    withCredentials([
-			     // usernamePassword(
-				    // credentialsId: "81dead19-04f7-4a8a-91c2-84adc1e8b1f1",
-				    // usernameVariable: "git_username",
-				    // passwordVariable: "git_password"
-				    // ),
-			file(
-				credentialsId: 'ssh-devops1-dev-2025',
-				variable: 'GOOGLE_APPLICATION_CREDENTIALS'
-				) 
-			    ]){
-                    println('Hello This is the git passkey token name: "Surpass"')
-			sh "pwd ${WORKSPACE}"
+					// Optionally, ensure the repo is checked out before pulling
+					checkout([$class: 'GitSCM', branches: [[name: '*/main']], userRemoteConfigs: [[url: 'https://github.com/suprit123h/gcp-ssh-2025-wisdom-dev.git']]])
+                    git pull https://github.com/suprit123h/gcp-ssh-2025-wisdom-dev.git
 
-		    sh '''
-                       git pull https://github.com/suprit123h/gcp-ssh-2025-wisdom-dev.git
-		       cd gcp-ssh-2025-wisdom-dev
-	               pwd
-		       ls
-	 
-	               terraform init
-                       terraform plan
-                     '''
-		    }
-		   }
+					sh '''
+						git pull
+						pwd
+						ls
 
-                }
-            }
+						terraform init
+						terraform plan
+					'''
+				}
+			}
+		}
+	}
         }
     }
 }
