@@ -27,7 +27,7 @@ pipeline {
 					// git pull "https://github.com/suprit123h/gcp-ssh-2025-wisdom-dev.git"
 
 					sh '''
-						git pull
+						git pull origin master
 						pwd
 						ls
 
