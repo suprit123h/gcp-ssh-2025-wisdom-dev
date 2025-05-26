@@ -30,6 +30,7 @@ pipeline {
 						git pull origin master
 						pwd
 						ls
+                                                mv ${GOOGLE_APPLICATION_CREDENTIALS} ssh-devops1-dev-2025.json
                                                 rm -rf *.tfstate
 						terraform init
 						terraform plan
