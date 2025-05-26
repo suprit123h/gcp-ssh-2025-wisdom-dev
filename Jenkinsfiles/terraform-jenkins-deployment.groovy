@@ -20,7 +20,7 @@ pipeline {
 				    // passwordVariable: "git_password"
 				    // ),
 			file(
-				credentialsId: "ssh-devops1-dev-2025-9684dfcf3b32",
+				credentialsId: "ssh-devops1-dev-2025",
 				variables: "GOOGLE_APPLICATION_CREDENTIALS"
 				) 
 			    ]){
