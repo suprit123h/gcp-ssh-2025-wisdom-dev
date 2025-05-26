@@ -21,7 +21,7 @@ pipeline {
 				    // ),
 			file(
 				credentialsId: "ssh-devops1-dev-2025-9684dfcf3b32",
-				variables: 'GOOGLE_APPLICATION_CREDENTIALS'
+				variables: "GOOGLE_APPLICATION_CREDENTIALS"
 				) 
 			    ]){
 			    sh "echo $git_username"
