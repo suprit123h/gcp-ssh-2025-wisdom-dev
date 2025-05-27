@@ -34,7 +34,6 @@ pipeline {
                                                 rm -rf *.tfstate
 						terraform init
 						terraform plan
-                                                // terraform apply -auto-approve -no-color
 						terraform destroy -auto-approve -no-color --disable_dependent_services = True
 					'''
 				}
