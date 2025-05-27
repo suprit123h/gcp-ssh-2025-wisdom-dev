@@ -33,8 +33,10 @@ pipeline {
                                                 mv ${GOOGLE_APPLICATION_CREDENTIALS} ssh-devops1-dev-2025.json
                                                 rm -rf *.tfstate
 						terraform init
-						terraform plan
-						terraform destroy -auto-approve -no-color --disable_dependent_services = True
+                                                echo "=================================================="
+						terraform plan -destroy
+                                                echo "=================================================="
+						terraform destroy -auto-approve -no-color -disable_dependent_services=True
 					'''
 				}
 			}
