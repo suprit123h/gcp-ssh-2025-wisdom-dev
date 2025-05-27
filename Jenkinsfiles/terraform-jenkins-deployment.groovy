@@ -34,6 +34,12 @@ pipeline {
                                                 rm -rf *.tfstate
 						terraform init
                                                 echo "=================================================="
+						terraform plan
+                                                echo "=================================================="
+                                                terraform apply -auto-approve
+	                                        echo "=================================================="
+					        sleep 30
+	                                        echo "=================================================="
 						terraform plan -destroy
                                                 echo "=================================================="
 						terraform destroy -auto-approve -no-color
