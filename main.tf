@@ -1,3 +1,9 @@
+resource "google_project_service" "cloud_resource_manager" {
+  project = var.project_id
+  service = "cloudresourcemanager.googleapis.com"
+  disable_dependent_services = true
+}
+
 resource "google_storage_bucket" "default" {
   name = "ssh-2025-wisdom-dev-terraform"
   location = var.region
