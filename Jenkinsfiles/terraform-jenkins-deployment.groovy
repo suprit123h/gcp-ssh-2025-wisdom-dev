@@ -36,7 +36,7 @@ pipeline {
                                                 echo "=================================================="
 						terraform plan -destroy
                                                 echo "=================================================="
-						terraform destroy -auto-approve -no-color -disable_dependent_services=True
+						terraform destroy -auto-approve -no-color
 					'''
 				}
 			}
