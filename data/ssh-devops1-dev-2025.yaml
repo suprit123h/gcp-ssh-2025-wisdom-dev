@@ -1,0 +1,9 @@
+workspaces:
+  dev:
+    bucket_name: "dev-bucket"
+    location: "us-central1"
+    storage_class: "STANDARD"
+  prod:
+    bucket_name: "prod-bucket"
+    location: "us-east1"
+    storage_class: "NEARLINE"
